@@ -39,3 +39,21 @@ public void RemoveBook(Book book)
 /// Gets or sets a book articul.
 /// </summary>
 public string Articul { get; set; }
+
+public List<Book> GetBooksByAuthor(string author)
+{
+    // TODO step 3.
+    return [];
+}
+    
+public Book GetBookByTitle(string title)
+{
+    // TODO step 3.
+    return new Book();
+}
+
+public Book GetBookByArticul(string articul)
+{
+    // TODO step 3.
+    return new Book();
+}
