@@ -24,3 +24,18 @@ public class LibraryManager : ILibraryManager
         // TODO step 1.
     }
 }
+
+public void AddBook(Book book)
+{
+    // TODO step 2.
+}
+
+public void RemoveBook(Book book)
+{
+    // TODO step 1.
+}
+
+/// <summary>
+/// Gets or sets a book articul.
+/// </summary>
+public string Articul { get; set; }
