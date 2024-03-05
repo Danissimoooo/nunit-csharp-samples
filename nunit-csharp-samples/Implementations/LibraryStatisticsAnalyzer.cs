@@ -1,5 +1,7 @@
 public class LibraryStatisticsAnalyzer
 {
+    public class LibraryStatisticsAnalyzer
+{
     private readonly LibraryManager _manager;
 
     public LibraryStatisticsAnalyzer(LibraryManager manager)
@@ -38,5 +40,31 @@ public class LibraryStatisticsAnalyzer
     {
         // TODO step 3.
         return new Book();
+    }
+}
+
+    /// <summary>
+    /// Тест: Перевіряє, чи повертається правильний список книг за автором.
+    /// </summary>
+    public void Test_GetBooksByAuthor_ReturnsCorrectListOfBooks()
+    {
+        string author = "Джон Доу";
+        List<Book> expectedBooks = new List<Book>
+        {
+            new Book { Author = author, Title = "Книга 1" },
+            new Book { Author = author, Title = "Книга 2" },
+            new Book { Author = author, Title = "Книга 3" }
+        };
+        foreach (var book in expectedBooks)
+        {
+            _manager.AddBook(book);
+        }
+
+        List<Book> actualBooks = GetBooksByAuthor(author);
+
+        if (expectedBooks.Count != actualBooks.Count || !expectedBooks.All(actualBooks.Contains))
+        {
+            throw new Exception("Помилка тестування: список повернутих книг не відповідає очікуваному.");
+        }
     }
 }

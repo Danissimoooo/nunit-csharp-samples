@@ -1,4 +1,17 @@
-/// <summary>
+public class LibraryManager : ILibraryManager
+{
+    /// <summary>
+/// A manager for a library's collection of books.
+/// </summary>
+public class LibraryManager : ILibraryManager
+{
+    private List<Book> _books;
+
+public class LibraryManager : ILibraryManager
+{
+    public class LibraryManager : ILibraryManager
+{
+    /// <summary>
 /// A manager for a library's collection of books.
 /// </summary>
 public class LibraryManager : ILibraryManager
@@ -57,3 +70,60 @@ public Book GetBookByArticul(string articul)
     // TODO step 3.
     return new Book();
 }
+
+    /// <summary>
+    /// Тест: Перевіряє, що книга успішно додається до списку книг.
+    /// </summary>
+    public void Test_AddBook_AddsBookToList()
+    {
+        Book bookToAdd = new Book(); // Створюємо новий екземпляр книги
+        AddBook(bookToAdd); // Додаємо книгу
+        if (!_books.Contains(bookToAdd))
+        {
+            throw new Exception("Помилка тестування: книга не була додана до списку.");
+        }
+    }
+
+    /// <summary>
+    /// Тест: Перевіряє, що книга успішно видаляється зі списку книг.
+    /// </summary>
+    public void Test_RemoveBook_RemovesBookFromList()
+    {
+        Book bookToRemove = new Book(); // Створюємо новий екземпляр книги
+        AddBook(bookToRemove); // Додаємо книгу до списку
+        RemoveBook(bookToRemove); // Видаляємо книгу
+        if (_books.Contains(bookToRemove))
+        {
+            throw new Exception("Помилка тестування: книга не видалена зі списку.");
+        }
+    }
+}
+
+    /// <summary>
+    /// Тест: Перевіряє, що книга успішно додається до списку книг.
+    /// </summary>
+    public void Test_AddBook_AddsBookToList()
+    {
+        Book bookToAdd = new Book(); // Створюємо новий екземпляр книги
+        AddBook(bookToAdd); // Додаємо книгу
+        if (!_books.Contains(bookToAdd))
+        {
+            throw new Exception("Помилка тестування: книга не була додана до списку.");
+        }
+    }
+
+    /// <summary>
+    /// Тест: Перевіряє, що книга успішно видаляється зі списку книг.
+    /// </summary>
+    public void Test_RemoveBook_RemovesBookFromList()
+    {
+        Book bookToRemove = new Book(); // Створюємо новий екземпляр книги
+        AddBook(bookToRemove); // Додаємо книгу до списку
+        RemoveBook(bookToRemove); // Видаляємо книгу
+        if (_books.Contains(bookToRemove))
+        {
+            throw new Exception("Помилка тестування: книга не видалена зі списку.");
+        }
+    }
+}
+
